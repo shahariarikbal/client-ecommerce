@@ -8,7 +8,7 @@ Client single vendor ecommerce management application
 - Clone the repo
 - Run `git pull origin development`
 - Run `composer install`
-- Setup databse
+- Setup database
 - Run `php artisan migrate`
 
 ## License
