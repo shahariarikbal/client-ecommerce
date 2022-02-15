@@ -68,7 +68,7 @@
                 <button class="mobile-menu-toggler mr-2" type="button">
                     <i class="fas fa-bars"></i>
                 </button>
-                <a href="demo1.html" class="logo">
+                <a href="{{ url('/') }}" class="logo">
                     <img src="{{ asset('frontend/') }}/assets/images/logo.png" width="111" height="44" alt="Porto Logo">
                 </a>
             </div>
@@ -115,9 +115,9 @@
                 </div>
                 <!-- End .header-contact -->
 
-                <a href="login.html" class="header-icon header-icon-user"><i class="icon-user-2"></i></a>
+                <a href="#" class="header-icon header-icon-user"><i class="icon-user-2"></i></a>
 
-                <a href="wishlist.html" class="header-icon"><i class="icon-wishlist-2"></i></a>
+                <a href="#" class="header-icon"><i class="icon-wishlist-2"></i></a>
 
                 <div class="dropdown cart-dropdown">
                     <a href="#" title="Cart" class="dropdown-toggle dropdown-arrow cart-toggle" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false" data-display="static">
