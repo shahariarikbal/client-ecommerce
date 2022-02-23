@@ -8,7 +8,7 @@
                     <div class="widget">
                         <h4 class="widget-title">About Us</h4>
                         <a href="demo1.html">
-                            <img src="{{ asset('frontend/') }}/assets/images/logo-footer.png" alt="Logo" class="logo-footer">
+                            <img src="{{ asset('frontend/') }}/assets/images/logo.png" alt="Logo" class="logo-footer">
                         </a>
                         <p class="m-b-4">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Duis nec vestibulum magna, et dapibus lacus. Duis nec vestibulum magna, et dapibus lacus.</p>
                         <a href="#" class="read-more text-white">read more...</a>

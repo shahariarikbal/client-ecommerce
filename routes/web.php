@@ -26,5 +26,9 @@ Route::group(['prefix' => 'admin'], function(){
     Route::group(['middleware' => 'admin'], function(){
         Route::get('/dashboard', [App\Http\Controllers\Admin\AdminController::class, 'dashboard']);
         Route::post('/logout', [App\Http\Controllers\Admin\AdminController::class, 'logout']);
+
+        //============ Category ================//
+        Route::get('/category/manage', [App\Http\Controllers\Admin\CategoryController::class, 'index']);
+        Route::get('/category/add', [App\Http\Controllers\Admin\CategoryController::class, 'create']);
     });
 });
