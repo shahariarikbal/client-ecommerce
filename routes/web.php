@@ -29,6 +29,26 @@ Route::group(['prefix' => 'admin'], function(){
 
         //============ Category ================//
         Route::get('/category/manage', [App\Http\Controllers\Admin\CategoryController::class, 'index']);
-        Route::get('/category/add', [App\Http\Controllers\Admin\CategoryController::class, 'create']);
+        Route::get('/category/create', [App\Http\Controllers\Admin\CategoryController::class, 'create']);
+        Route::post('/category/store', [App\Http\Controllers\Admin\CategoryController::class, 'store']);
+        Route::get('/category/edit/{category}', [App\Http\Controllers\Admin\CategoryController::class, 'edit']);
+        Route::post('/category/update/{category}', [App\Http\Controllers\Admin\CategoryController::class, 'update']);
+        Route::get('/category/delete/{category}', [App\Http\Controllers\Admin\CategoryController::class, 'destroy']);
+
+        //============ Brand ================//
+        Route::get('/brand/manage', [App\Http\Controllers\Admin\BrandController::class, 'index']);
+        Route::get('/brand/create', [App\Http\Controllers\Admin\BrandController::class, 'create']);
+        Route::post('/brand/store', [App\Http\Controllers\Admin\BrandController::class, 'store']);
+        Route::get('/brand/edit/{brand}', [App\Http\Controllers\Admin\BrandController::class, 'edit']);
+        Route::post('/brand/update/{brand}', [App\Http\Controllers\Admin\BrandController::class, 'update']);
+        Route::get('/brand/delete/{brand}', [App\Http\Controllers\Admin\BrandController::class, 'destroy']);
+
+        //============ Product ================//
+        Route::get('/product/manage', [App\Http\Controllers\Admin\ProductController::class, 'index']);
+        Route::get('/product/create', [App\Http\Controllers\Admin\ProductController::class, 'create']);
+        Route::post('/product/store', [App\Http\Controllers\Admin\ProductController::class, 'store']);
+        Route::get('/product/edit/{product}', [App\Http\Controllers\Admin\ProductController::class, 'edit']);
+        Route::post('/product/update/{product}', [App\Http\Controllers\Admin\ProductController::class, 'update']);
+        Route::get('/product/delete/{product}', [App\Http\Controllers\Admin\ProductController::class, 'destroy']);
     });
 });
