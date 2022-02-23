@@ -14,12 +14,12 @@
           <div class="dropdown">
             <a href="" class="nav-link nav-link-profile" data-toggle="dropdown">
               <span class="logged-name hidden-md-down" style="text-transform: capitalize;">{{ Session::get('admin_role') }}</span>
-              <img src="{{ url('admin/images/admin_100.png') }}" class="wd-32 rounded-circle" alt="">
+              <img src="{{ url('backend/images/admin_100.png') }}" class="wd-32 rounded-circle" alt="">
               <span class="square-10 bg-success"></span>
             </a>
             <div class="dropdown-menu dropdown-menu-header wd-250">
               <div class="tx-center">
-                <a href=""><img src="{{ url('admin/images/admin.png') }}" class="wd-80 rounded-circle" alt=""></a>
+                <a href=""><img src="{{ url('backend/images/admin.png') }}" class="wd-80 rounded-circle" alt=""></a>
                 <h6 class="logged-fullname">Admin</h6>
                 <p>Admin</p>
               </div>
