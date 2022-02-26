@@ -35,11 +35,11 @@
             <ul class="br-menu-sub" style="{{ Request::is('admin/category*') ? 'display: block;' : 'display: none;'}}">
 
               <li class="sub-item">
-                <a href="#" class="sub-link {{ Request::is('admin/category/manage') ? 'active' : ''}}">Manage</a>
+                <a href="{{ url('/admin/category/manage') }}" class="sub-link {{ Request::is('admin/category/manage') ? 'active' : ''}}">Manage</a>
               </li>
 
               <li class="sub-item">
-                <a href="#" class="sub-link {{ Request::is('admin/category/add') ? 'active' : ''}}">Add</a>
+                <a href="{{ url('/admin/category/create') }}" class="sub-link {{ Request::is('admin/category/add') ? 'active' : ''}}">Add</a>
               </li>
 
             </ul>
