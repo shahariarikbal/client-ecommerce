@@ -54,15 +54,15 @@
               {{-- <i class="menu-item-icon fa fa-star tx-16"></i> --}}
               <span class="menu-item-label">Brand</span>
             </a><!-- br-menu-link -->
-            <ul class="br-menu-sub" style="{{ Request::is('admin/department*') ? 'display: block;' : 'display: none;'}}">
+            <ul class="br-menu-sub" style="{{ Request::is('admin/brand*') ? 'display: block;' : 'display: none;'}}">
 
               <li class="sub-item">
-                <a href="{{ url('admin/department/index') }}" class="sub-link {{ Request::is('admin/department/index') ? 'active' : ''}}">Manage</a>
+                <a href="{{ url('admin/brand/manage') }}" class="sub-link {{ Request::is('admin/brand/manage') ? 'active' : ''}}">Manage</a>
               </li>
 
               {{-- @if($role->role == 'admin' || $role->role == 'stuff') --}}
               <li class="sub-item">
-                <a href="{{ url('admin/department/create') }}" class="sub-link {{ Request::is('admin/department/create') ? 'active' : ''}}">Add</a>
+                <a href="{{ url('admin/brand/create') }}" class="sub-link {{ Request::is('admin/brand/create') ? 'active' : ''}}">Add</a>
               </li>
               {{-- @endif --}}
             </ul>
@@ -76,15 +76,15 @@
               {{-- <i class="menu-item-icon fa fa-star tx-16"></i> --}}
               <span class="menu-item-label">Product</span>
             </a><!-- br-menu-link -->
-            <ul class="br-menu-sub" style="{{ Request::is('admin/teacher*') ? 'display: block;' : 'display: none;'}}">
+            <ul class="br-menu-sub" style="{{ Request::is('admin/product*') ? 'display: block;' : 'display: none;'}}">
 
               <li class="sub-item">
-                <a href="{{ url('admin/teacher/index') }}" class="sub-link {{ Request::is('admin/teacher/index') ? 'active' : ''}}">Manage</a>
+                <a href="{{ url('admin/product/manage') }}" class="sub-link {{ Request::is('admin/product/manage') ? 'active' : ''}}">Manage</a>
               </li>
 
               {{-- @if($role->role == 'admin' || $role->role == 'stuff') --}}
               <li class="sub-item">
-                <a href="{{ url('admin/teacher/create') }}" class="sub-link {{ Request::is('admin/teacher/create') ? 'active' : ''}}">Add</a>
+                <a href="{{ url('admin/product/create') }}" class="sub-link {{ Request::is('admin/product/create') ? 'active' : ''}}">Add</a>
               </li>
               {{-- @endif --}}
             </ul>
