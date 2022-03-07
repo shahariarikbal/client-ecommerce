@@ -11,4 +11,9 @@ class FrontendController extends Controller
     {
         return view('frontend.home.index');
     }
+    public function language($code)
+    {
+    	session()->put('language_code', $code);
+        return redirect()->back();
+    }
 }

@@ -14,6 +14,8 @@
 
     <!-- Favicon -->
     @include('frontend.includes.style')
+
+    @yield('page-css')
 </head>
 
 <body>
@@ -240,6 +242,10 @@
 
 <!-- Plugins JS File -->
 @include('frontend.includes.script')
+
+
+
+@yield('page-js')
 </body>
 
 

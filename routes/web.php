@@ -3,7 +3,7 @@
 use Illuminate\Support\Facades\Route;
 
 //=============== Basic Routes ====================//
-Route::get('clear', function () {
+Route::get('cache', function () {
     \Artisan::call('cache:forget spatie.permission.cache');
     \Artisan::call('view:clear');
     \Artisan::call('cache:clear');
@@ -12,13 +12,23 @@ Route::get('clear', function () {
     dd("All clear!");
 });
 
+//=============== Frontend Routes ====================//
 
+Route::get('/', [App\Http\Controllers\Frontend\FrontendController::class, 'index'])->name('root');
+Route::get('/set-language/{code}', [App\Http\Controllers\Frontend\FrontendController::class, 'language'])->name('root');
 
-Route::get('/', [App\Http\Controllers\Frontend\FrontendController::class, 'index']);
+Route::get('products/all', [App\Http\Controllers\Frontend\ProductController::class, 'all'])->name('all.products');
+Route::get('products/details/{id}', [App\Http\Controllers\Frontend\ProductController::class, 'details']);
+
+Route::get('order/add-to-cart/{id}', [App\Http\Controllers\Frontend\OrderController::class, 'add_to_cart']);
+Route::get('order/cart/', [App\Http\Controllers\Frontend\OrderController::class, 'cart']);
+Route::post('order/cart/update/', [App\Http\Controllers\Frontend\OrderController::class, 'cartUpdate']);
+Route::get('order/checkout/', [App\Http\Controllers\Frontend\OrderController::class, 'checkout']);
+Route::get('order/cart/remove/{id}', [App\Http\Controllers\Frontend\OrderController::class, 'cartRemove']);
+Route::post('order/store/', [App\Http\Controllers\Frontend\OrderController::class, 'store']);
 
 Auth::routes();
 
-Route::get('/home', [App\Http\Controllers\HomeController::class, 'index'])->name('home');
 
 //=============== Admin Login ====================//
 Route::group(['prefix' => 'admin'], function(){
@@ -51,5 +61,9 @@ Route::group(['prefix' => 'admin'], function(){
         Route::get('/product/edit/{product}', [App\Http\Controllers\Admin\ProductController::class, 'edit']);
         Route::post('/product/update/{product}', [App\Http\Controllers\Admin\ProductController::class, 'update']);
         Route::get('/product/delete/{product}', [App\Http\Controllers\Admin\ProductController::class, 'destroy']);
+
+        //============ Order ================//
+        Route::get('/order/manage', [App\Http\Controllers\Admin\OrderController::class, 'index']);
+        Route::get('/order/delete/{order}', [App\Http\Controllers\Admin\OrderController::class, 'destroy']);
     });
 });
